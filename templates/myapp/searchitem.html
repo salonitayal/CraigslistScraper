@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h6 style="text-align: center;">you searched for </h6><h2 style="text-align: center;" >"{{ search | title }}"</h2>
+    <h6 style="text-align: center;">you searched for </h6><h4 style="text-align: center; color: gray;" >"{{ search | title }}"</h4>
 
     <div class="row">
         {% for post in final_postings %}
