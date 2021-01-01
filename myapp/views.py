@@ -13,7 +13,7 @@ def home(request):
 
 def new_search(request):
     search = request.POST.get('search')   #python dictionary get() method not "get/post"
-    #models.Search.objects.create(search=search)
+    models.Search.objects.create(search=search)
     final_url = BASE_CRAIGSLIST_URL.format(quote_plus(search))   # puts the searched query into the {}. thats why we using format
     response = requests.get(final_url)
     data = response.text
